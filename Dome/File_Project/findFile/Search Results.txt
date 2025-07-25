@@ -1,0 +1,4 @@
+找到文件: C:\Users\cjl\AppData\LocalLow\miHoYo
+绝对路径: C:\Users\cjl\AppData\LocalLow\miHoYo
+找到文件: C:\Users\cjl\AppData\Roaming\miHoYo
+绝对路径: C:\Users\cjl\AppData\Roaming\miHoYo
