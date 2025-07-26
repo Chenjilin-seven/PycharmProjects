@@ -1,8 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 data = {
-    "username": "admin",
-    "password": "123456"
+    "username": "chenjilin",
+    "password": "Xg520530"
 }
-response = requests.post("https://httpbin.org/post", data=data)
+response = requests.post("http://oi.nks.edu.cn:19360/zh/Account/Login?returnurl=%2F", data=data)
 print(response.text)
