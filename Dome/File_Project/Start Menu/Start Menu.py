@@ -12,3 +12,4 @@ try:
 except PermissionError:
     print("⚠️ 权限不足，无法移动。请手动将桌面上的 start_my_py.bat 文件复制到以下路径：")
     print(startup_path)
+# cjll
