@@ -43,7 +43,7 @@ except Exception as e:
     print(f"pass失败,原因:{e}")
     sys.exit(1)
 
-time.sleep(9.9123)
+time.sleep(20.9123)
 
 try:
     driver.execute_script('document.queryselector("#btn-login")', "568782")
