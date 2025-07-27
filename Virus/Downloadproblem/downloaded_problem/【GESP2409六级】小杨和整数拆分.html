@@ -1,0 +1,174 @@
+<html><head>
+<meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible">
+<meta content="IE=7" http-equiv="X-UA-Compatible">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>信息学奥赛一本通（C++版）在线评测系统</title>
+<link rel="iocn" type="image/x-icon" href="./favicon.ico">
+<link rel="stylesheet" href="bnuoj.css">
+<link type="text/css" rel="stylesheet" href="sh_style.css">
+<script type="text/javascript" src="js/sh_main3.js"></script>
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head><body topmargin="0" onload="sh_highlightDocument();"><div id="MathJax_Message" style="display: none;"></div>
+<center><table class="webtop" width="98%">
+<tbody><tr><th width="60%"><img src="5.jpg" border="0" name="banner"><br><font size="2" color="#FFA07A">成都石室中学、福建长乐一中信奥教练联合呈现。题库教师群:1040954710或515658966,仅供教师加入</font></th>
+<th width="15%" align="left">
+初赛题库：<a href="https://tg.ssoier.cn" target="_blank" class="a7">提高组</a>&nbsp;<a href="https://pj.ssoier.cn" target="_blank" class="a7">普及组</a><br><br>
+拥有自我：<a href="https://tk.ssoier.cn" target="_blank" class="a7">一本通自由题库</a><br><br>
+更多拥有：<a href="https://ex.ssoier.cn" target="_blank" class="a7">扩展题库</a>
+&nbsp;<a href="https://bas.ssoier.cn" target="_blank" class="a7">编程启蒙</a><br>
+</th>
+<th width="15%">
+你现在还未登录哦！<br><a href="login0.php">用户登录</a>&nbsp;&nbsp;<a href="find_pd.php">找回密码</a><br><a href="register_a.php">注册新用户</a></th></tr></tbody></table>
+<table class="menu" width="98%"><tbody><tr bgcolor="#c8d4f7">
+<th width="12%" class="menu"><a href="index.php" class="menu">首页 </a></th>
+<th width="12%" class="menu"><a href="ranklist.php" class="menu">排名 </a></th>
+<th width="14%" class="menu"><a href="status.php" class="menu">提交记录 </a></th>
+<th width="14%" class="menu"><a href="problem_list.php?page=" class="menu">题目列表 </a></th>
+<th width="14%" class="menu"><a href="contest_list.php" class="menu">测试比赛 </a></th>
+<th width="14%" class="menu"><a href="tch_index.php" class="menu">教师频道</a> </th>
+<th width="14%" class="menu"><a href="book.php" class="menu">正版书籍</a> </th>
+<th width="12%" class="menu"><a href="about.php" class="menu">关于 </a></th>
+</tr></tbody></table>
+<hr>
+<script type="text/javascript" src="utf8-php/ueditor.config.js"></script>
+<script type="text/javascript" src="utf8-php/ueditor.all.min.js"></script>
+<script type="text/javascript" src="utf8-php/lang/zh-cn/zh-cn.js"></script>
+<script type="text/javascript" src="mk/showdown.min.js"></script>
+<script type="text/x-mathjax-config;executed=true">
+  MathJax.Hub.Config({showProcessingMessages: false,tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],processEscapes:true},menuSettings: {zoom: "Hover"}});
+</script>
+<script type="text/javascript" src="mk/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<style type="text/css">
+pre {
+  margin:10px auto;
+  padding:10px;
+  background-color:#f1f1f1;
+  white-space:pre-wrap;
+  word-wrap:break-word;
+  letter-spacing:0;
+  font:14px/20px 'courier new';
+  position:relative;
+  border-radius:5px;
+  box-shadow:0px 0px 1px #000;
+}
+code {
+  padding:3px; 
+  font-weight:bold;
+  font-size:16px;
+  background-color:#e7e7e7;
+  border-radius:3px;
+}
+</style>
+<center><table in-width="600px"><tbody><tr><td class="pcontent"><center><h3>4083：【GESP2409六级】小杨和整数拆分</h3><br><font size="2">时间限制: 1000 ms &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 内存限制: 131072 KB<br>提交数:<span id="zz02">59</span>&nbsp;&nbsp;&nbsp; 通过数: <span id="zz03">44</span></font><br></center><h3>【题目描述】</h3>
+<script>pshow("小杨有一个正整数$n$ ，小杨想将它拆分成若干完全平方数的和，同时小杨希望拆分的数量越少越好。\n小杨请你编写程序计算出总和为$n$ 的完全平方数的最少数量。");</script><div class="xxbox"><p>小杨有一个正整数<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-1"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-2">n</span></span></span><script type="math/tex" id="MathJax-Element-1">n</script> ，小杨想将它拆分成若干完全平方数的和，同时小杨希望拆分的数量越少越好。</p><p>小杨请你编写程序计算出总和为<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-3"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-4">n</span></span></span><script type="math/tex" id="MathJax-Element-2">n</script> 的完全平方数的最少数量。</p></div>
+<h3>【输入】</h3>
+<script>pshow("第一行包含一个正整数$n$ ，含义如题面所示。");</script><div class="xxbox"><p>第一行包含一个正整数<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-5"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-6">n</span></span></span><script type="math/tex" id="MathJax-Element-3">n</script> ，含义如题面所示。</p></div>
+<h3>【输出】</h3>
+<script>pshow("输出一个整数，代表总和为$n$ 的完全平方数的最少数量。");</script><div class="xxbox"><p>输出一个整数，代表总和为<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-7"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-8">n</span></span></span><script type="math/tex" id="MathJax-Element-4">n</script> 的完全平方数的最少数量。</p></div>
+<h3>【输入样例】</h3>
+<font size="3"><pre>18</pre></font>
+<h3>【输出样例】</h3>
+<font size="3"><pre>2</pre></font>
+<h3>【提示】</h3>
+<script>pshow("18=9+9=16+1+1，其中最少需要$2$ 个完全平方数。\n数据范围\n对于20%的数据，$n\\le 20$;\n对于40%的数据，$n\\le 1000$;\n对于40%的数据，$n\\le 10^5$;\n对于全部数据，保证有$1\\le n\\le 10^5$ 。");</script><div class="xxbox"><p>18=9+9=16+1+1，其中最少需要<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-9"><span class="MJXp-mn" id="MJXp-Span-10">2</span></span></span><script type="math/tex" id="MathJax-Element-5">2</script> 个完全平方数。</p><p>数据范围</p><p>对于20%的数据，<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-11"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-12">n</span><span class="MJXp-mo" id="MJXp-Span-13" style="margin-left: 0.333em; margin-right: 0.333em;">≤</span><span class="MJXp-mn" id="MJXp-Span-14">20</span></span></span><script type="math/tex" id="MathJax-Element-6">n\le 20</script>;</p><p>对于40%的数据，<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-15"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-16">n</span><span class="MJXp-mo" id="MJXp-Span-17" style="margin-left: 0.333em; margin-right: 0.333em;">≤</span><span class="MJXp-mn" id="MJXp-Span-18">1000</span></span></span><script type="math/tex" id="MathJax-Element-7">n\le 1000</script>;</p><p>对于40%的数据，<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-19"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-20">n</span><span class="MJXp-mo" id="MJXp-Span-21" style="margin-left: 0.333em; margin-right: 0.333em;">≤</span><span class="MJXp-msubsup" id="MJXp-Span-22"><span class="MJXp-mn" id="MJXp-Span-23" style="margin-right: 0.05em;">10</span><span class="MJXp-mn MJXp-script" id="MJXp-Span-24" style="vertical-align: 0.5em;">5</span></span></span></span><script type="math/tex" id="MathJax-Element-8">n\le 10^5</script>;</p><p>对于全部数据，保证有<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-25"><span class="MJXp-mn" id="MJXp-Span-26">1</span><span class="MJXp-mo" id="MJXp-Span-27" style="margin-left: 0.333em; margin-right: 0.333em;">≤</span><span class="MJXp-mi MJXp-italic" id="MJXp-Span-28">n</span><span class="MJXp-mo" id="MJXp-Span-29" style="margin-left: 0.333em; margin-right: 0.333em;">≤</span><span class="MJXp-msubsup" id="MJXp-Span-30"><span class="MJXp-mn" id="MJXp-Span-31" style="margin-right: 0.05em;">10</span><span class="MJXp-mn MJXp-script" id="MJXp-Span-32" style="vertical-align: 0.5em;">5</span></span></span></span><script type="math/tex" id="MathJax-Element-9">1\le n\le 10^5</script> 。</p></div>
+<p align="center"> <a href="javascript:void(0);" onclick="submit()"><font color="blue">提交</font></a><a href="problem_stat.php?pid=4083" class="bottom_link"> 统计信息 </a> </p><script>function submit(){alert("你还没有登录！");}</script></td></tr></tbody></table><hr>
+<center><table width="100%" bgcolor="#F5F5F5"><tbody><tr><td align="right" width="50%"><font size="2">本题库与《信息学奥赛一本通（C++版）》（南京大学出版社）配套。<br>本网站属公益、非盈利性质，不涉及与书相关的商业活动。<br>蜀ICP备2024068936号-2&nbsp;&nbsp;联系我们:&nbsp;248801752@qq.com&nbsp;&nbsp;23967609@qq.com</font>
+</td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td align="left"><a href="hp1.php">网站使用规则</a><br>
+<a href="hp_user.php">网站用户协议</a>
+</td></tr></tbody></table>
+</center>
+</center></center></body></html>

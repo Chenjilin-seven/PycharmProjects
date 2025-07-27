@@ -1,0 +1,194 @@
+<html><head>
+<meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible">
+<meta content="IE=7" http-equiv="X-UA-Compatible">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>信息学奥赛一本通（C++版）在线评测系统</title>
+<link rel="iocn" type="image/x-icon" href="./favicon.ico">
+<link rel="stylesheet" href="bnuoj.css">
+<link type="text/css" rel="stylesheet" href="sh_style.css">
+<script type="text/javascript" src="js/sh_main3.js"></script>
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head><body topmargin="0" onload="sh_highlightDocument();"><div id="MathJax_Message" style="display: none;"></div>
+<center><table class="webtop" width="98%">
+<tbody><tr><th width="60%"><img src="5.jpg" border="0" name="banner"><br><font size="2" color="#FFA07A">成都石室中学、福建长乐一中信奥教练联合呈现。题库教师群:1040954710或515658966,仅供教师加入</font></th>
+<th width="15%" align="left">
+初赛题库：<a href="https://tg.ssoier.cn" target="_blank" class="a7">提高组</a>&nbsp;<a href="https://pj.ssoier.cn" target="_blank" class="a7">普及组</a><br><br>
+拥有自我：<a href="https://tk.ssoier.cn" target="_blank" class="a7">一本通自由题库</a><br><br>
+更多拥有：<a href="https://ex.ssoier.cn" target="_blank" class="a7">扩展题库</a>
+&nbsp;<a href="https://bas.ssoier.cn" target="_blank" class="a7">编程启蒙</a><br>
+</th>
+<th width="15%">
+你现在还未登录哦！<br><a href="login0.php">用户登录</a>&nbsp;&nbsp;<a href="find_pd.php">找回密码</a><br><a href="register_a.php">注册新用户</a></th></tr></tbody></table>
+<table class="menu" width="98%"><tbody><tr bgcolor="#c8d4f7">
+<th width="12%" class="menu"><a href="index.php" class="menu">首页 </a></th>
+<th width="12%" class="menu"><a href="ranklist.php" class="menu">排名 </a></th>
+<th width="14%" class="menu"><a href="status.php" class="menu">提交记录 </a></th>
+<th width="14%" class="menu"><a href="problem_list.php?page=" class="menu">题目列表 </a></th>
+<th width="14%" class="menu"><a href="contest_list.php" class="menu">测试比赛 </a></th>
+<th width="14%" class="menu"><a href="tch_index.php" class="menu">教师频道</a> </th>
+<th width="14%" class="menu"><a href="book.php" class="menu">正版书籍</a> </th>
+<th width="12%" class="menu"><a href="about.php" class="menu">关于 </a></th>
+</tr></tbody></table>
+<hr>
+<script type="text/javascript" src="utf8-php/ueditor.config.js"></script>
+<script type="text/javascript" src="utf8-php/ueditor.all.min.js"></script>
+<script type="text/javascript" src="utf8-php/lang/zh-cn/zh-cn.js"></script>
+<script type="text/javascript" src="mk/showdown.min.js"></script>
+<script type="text/x-mathjax-config;executed=true">
+  MathJax.Hub.Config({showProcessingMessages: false,tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],processEscapes:true},menuSettings: {zoom: "Hover"}});
+</script>
+<script type="text/javascript" src="mk/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<style type="text/css">
+pre {
+  margin:10px auto;
+  padding:10px;
+  background-color:#f1f1f1;
+  white-space:pre-wrap;
+  word-wrap:break-word;
+  letter-spacing:0;
+  font:14px/20px 'courier new';
+  position:relative;
+  border-radius:5px;
+  box-shadow:0px 0px 1px #000;
+}
+code {
+  padding:3px; 
+  font-weight:bold;
+  font-size:16px;
+  background-color:#e7e7e7;
+  border-radius:3px;
+}
+</style>
+<center><table in-width="600px"><tbody><tr><td class="pcontent"><center><h3>4012：【GESP2306四级】图像压缩</h3><br><font size="2">时间限制: 1000 ms &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 内存限制: 65536 KB<br>提交数:<span id="zz02">339</span>&nbsp;&nbsp;&nbsp; 通过数: <span id="zz03">189</span></font><br></center><h3>【题目描述】</h3>
+<script>pshow("图像是由很多的像素点组成的。如果用 $0$ 表示黑，$255$ 表示白，$0$ 和$255$之间的值代表不同程度的灰色，则可以用一个字节表达一个像素（取值范围为十进制 $0$-$255$、十六进制 $00$-$FF$）。这样的像素组成的图像，称为$256$ 级灰阶的灰度图像。\n现在希望将 $256$ 级灰阶的灰度图像压缩为 $16$ 级灰阶，即每个像素的取值范围为十进制 $0-15$、十六进制 $0-F$。压缩规则为：统计出每种灰阶的数量，取数量最多的前 $16$ 种灰阶（如某种灰阶的数量与另外一种灰阶的数量相同，则以灰阶值从小到大为序），分别编号 $0-F$（最多的编号为 $0$，以此类推）。其他灰阶转换到最近的 $16$ 种灰阶之一，将某个点灰阶数与 $16$ 种灰阶种的一种相减，绝对值最小即为最近，如果绝对值相等，则编号较小的灰阶更近。");</script><div class="xxbox"><p>图像是由很多的像素点组成的。如果用 <span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-1"><span class="MJXp-mn" id="MJXp-Span-2">0</span></span></span><script type="math/tex" id="MathJax-Element-1">0</script> 表示黑，<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-3"><span class="MJXp-mn" id="MJXp-Span-4">255</span></span></span><script type="math/tex" id="MathJax-Element-2">255</script> 表示白，<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-5"><span class="MJXp-mn" id="MJXp-Span-6">0</span></span></span><script type="math/tex" id="MathJax-Element-3">0</script> 和<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-7"><span class="MJXp-mn" id="MJXp-Span-8">255</span></span></span><script type="math/tex" id="MathJax-Element-4">255</script>之间的值代表不同程度的灰色，则可以用一个字节表达一个像素（取值范围为十进制 <span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-9"><span class="MJXp-mn" id="MJXp-Span-10">0</span></span></span><script type="math/tex" id="MathJax-Element-5">0</script>-<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-11"><span class="MJXp-mn" id="MJXp-Span-12">255</span></span></span><script type="math/tex" id="MathJax-Element-6">255</script>、十六进制 <span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-13"><span class="MJXp-mn" id="MJXp-Span-14">00</span></span></span><script type="math/tex" id="MathJax-Element-7">00</script>-<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-15"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-16">F</span><span class="MJXp-mi MJXp-italic" id="MJXp-Span-17">F</span></span></span><script type="math/tex" id="MathJax-Element-8">FF</script>）。这样的像素组成的图像，称为<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-18"><span class="MJXp-mn" id="MJXp-Span-19">256</span></span></span><script type="math/tex" id="MathJax-Element-9">256</script> 级灰阶的灰度图像。</p><p>现在希望将 <span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-20"><span class="MJXp-mn" id="MJXp-Span-21">256</span></span></span><script type="math/tex" id="MathJax-Element-10">256</script> 级灰阶的灰度图像压缩为 <span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-22"><span class="MJXp-mn" id="MJXp-Span-23">16</span></span></span><script type="math/tex" id="MathJax-Element-11">16</script> 级灰阶，即每个像素的取值范围为十进制 <span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-24"><span class="MJXp-mn" id="MJXp-Span-25">0</span><span class="MJXp-mo" id="MJXp-Span-26" style="margin-left: 0.267em; margin-right: 0.267em;">−</span><span class="MJXp-mn" id="MJXp-Span-27">15</span></span></span><script type="math/tex" id="MathJax-Element-12">0-15</script>、十六进制 <span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-28"><span class="MJXp-mn" id="MJXp-Span-29">0</span><span class="MJXp-mo" id="MJXp-Span-30" style="margin-left: 0.267em; margin-right: 0.267em;">−</span><span class="MJXp-mi MJXp-italic" id="MJXp-Span-31">F</span></span></span><script type="math/tex" id="MathJax-Element-13">0-F</script>。压缩规则为：统计出每种灰阶的数量，取数量最多的前 <span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-32"><span class="MJXp-mn" id="MJXp-Span-33">16</span></span></span><script type="math/tex" id="MathJax-Element-14">16</script> 种灰阶（如某种灰阶的数量与另外一种灰阶的数量相同，则以灰阶值从小到大为序），分别编号 <span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-34"><span class="MJXp-mn" id="MJXp-Span-35">0</span><span class="MJXp-mo" id="MJXp-Span-36" style="margin-left: 0.267em; margin-right: 0.267em;">−</span><span class="MJXp-mi MJXp-italic" id="MJXp-Span-37">F</span></span></span><script type="math/tex" id="MathJax-Element-15">0-F</script>（最多的编号为 <span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-38"><span class="MJXp-mn" id="MJXp-Span-39">0</span></span></span><script type="math/tex" id="MathJax-Element-16">0</script>，以此类推）。其他灰阶转换到最近的 <span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-40"><span class="MJXp-mn" id="MJXp-Span-41">16</span></span></span><script type="math/tex" id="MathJax-Element-17">16</script> 种灰阶之一，将某个点灰阶数与 <span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-42"><span class="MJXp-mn" id="MJXp-Span-43">16</span></span></span><script type="math/tex" id="MathJax-Element-18">16</script> 种灰阶种的一种相减，绝对值最小即为最近，如果绝对值相等，则编号较小的灰阶更近。</p></div>
+<h3>【输入】</h3>
+<script>pshow("输入第 $1$ 行为一个正整数$N$，表示接下来有$N$行数据组成一副256 级灰阶的灰度图像。约定 $10 ≤N ≤ 20$。\n第 $2$ 行开始的$N$行，每行为长度相等且为偶数的字符串，每两个字符用十六进制表示一个像素。约定输入的灰度图像至少有 $16$ 种灰阶。约定每行最多$20$个像素。");</script><div class="xxbox"><p>输入第 <span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-44"><span class="MJXp-mn" id="MJXp-Span-45">1</span></span></span><script type="math/tex" id="MathJax-Element-19">1</script> 行为一个正整数<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-46"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-47">N</span></span></span><script type="math/tex" id="MathJax-Element-20">N</script>，表示接下来有<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-48"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-49">N</span></span></span><script type="math/tex" id="MathJax-Element-21">N</script>行数据组成一副256 级灰阶的灰度图像。约定 <span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-50"><span class="MJXp-mn" id="MJXp-Span-51">10</span><span class="MJXp-mo" id="MJXp-Span-52" style="margin-left: 0.333em; margin-right: 0.333em;">≤</span><span class="MJXp-mi MJXp-italic" id="MJXp-Span-53">N</span><span class="MJXp-mo" id="MJXp-Span-54" style="margin-left: 0.333em; margin-right: 0.333em;">≤</span><span class="MJXp-mn" id="MJXp-Span-55">20</span></span></span><script type="math/tex" id="MathJax-Element-22">10 ≤N ≤ 20</script>。</p><p>第 <span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-56"><span class="MJXp-mn" id="MJXp-Span-57">2</span></span></span><script type="math/tex" id="MathJax-Element-23">2</script> 行开始的<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-58"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-59">N</span></span></span><script type="math/tex" id="MathJax-Element-24">N</script>行，每行为长度相等且为偶数的字符串，每两个字符用十六进制表示一个像素。约定输入的灰度图像至少有 <span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-60"><span class="MJXp-mn" id="MJXp-Span-61">16</span></span></span><script type="math/tex" id="MathJax-Element-25">16</script> 种灰阶。约定每行最多<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-62"><span class="MJXp-mn" id="MJXp-Span-63">20</span></span></span><script type="math/tex" id="MathJax-Element-26">20</script>个像素。</p></div>
+<h3>【输出】</h3>
+<script>pshow("第一行输出压缩选定的 $16$ 种灰阶的十六进制编码，共计$32$ 个字符。\n第二行开始的$N$行，输出压缩后的图像，每个像素一位十六进制数表示压缩后的灰阶值。");</script><div class="xxbox"><p>第一行输出压缩选定的 <span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-64"><span class="MJXp-mn" id="MJXp-Span-65">16</span></span></span><script type="math/tex" id="MathJax-Element-27">16</script> 种灰阶的十六进制编码，共计<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-66"><span class="MJXp-mn" id="MJXp-Span-67">32</span></span></span><script type="math/tex" id="MathJax-Element-28">32</script> 个字符。</p><p>第二行开始的<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-68"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-69">N</span></span></span><script type="math/tex" id="MathJax-Element-29">N</script>行，输出压缩后的图像，每个像素一位十六进制数表示压缩后的灰阶值。</p></div>
+<h3>【输入样例】</h3>
+<font size="3"><pre>10
+00FFCFAB00FFAC09071B5CCFAB76
+00AFCBAB11FFAB09981D34CFAF56
+01BFCEAB00FFAC0907F25FCFBA65
+10FBCBAB11FFAB09981DF4CFCA67
+00FFCBFB00FFAC0907A25CCFFC76
+00FFCBAB1CFFCB09FC1AC4CFCF67
+01FCCBAB00FFAC0F071A54CFBA65
+10EFCBAB11FFAB09981B34CFCF67
+01FFCBAB00FFAC0F071054CFAC76
+1000CBAB11FFAB0A981B84CFCF66</pre></font>
+<h3>【输出样例】</h3>
+<font size="3"><pre>ABCFFF00CB09AC07101198011B6776FC
+321032657CD10E
+36409205ACC16D
+B41032657FD16D
+8F409205ACF14D
+324F326570D1FE
+3240C245FC411D
+BF4032687CD16D
+8F409205ACC11D
+B240326878D16E
+83409205ACE11D</pre></font>
+<h3>【提示】</h3>
+<script>pshow("【样例解释 1】\n灰阶‘AB’、‘CF’和‘FF’出现 14 次，‘00’出现10 次，‘CB’出现9 次，‘09’出现 7 次，‘AC’出现 6 次，‘07’出现5 次，‘10’、‘11’和‘98’出现 4 次，‘01’、‘1B’、‘67’、‘76’和‘FC’出现3 次。");</script><div class="xxbox"><p>【样例解释 1】</p><p>灰阶‘AB’、‘CF’和‘FF’出现 14 次，‘00’出现10 次，‘CB’出现9 次，‘09’出现 7 次，‘AC’出现 6 次，‘07’出现5 次，‘10’、‘11’和‘98’出现 4 次，‘01’、‘1B’、‘67’、‘76’和‘FC’出现3 次。</p></div>
+<p align="center"> <a href="javascript:void(0);" onclick="submit()"><font color="blue">提交</font></a><a href="problem_stat.php?pid=4012" class="bottom_link"> 统计信息 </a> </p><script>function submit(){alert("你还没有登录！");}</script></td></tr></tbody></table><hr>
+<center><table width="100%" bgcolor="#F5F5F5"><tbody><tr><td align="right" width="50%"><font size="2">本题库与《信息学奥赛一本通（C++版）》（南京大学出版社）配套。<br>本网站属公益、非盈利性质，不涉及与书相关的商业活动。<br>蜀ICP备2024068936号-2&nbsp;&nbsp;联系我们:&nbsp;248801752@qq.com&nbsp;&nbsp;23967609@qq.com</font>
+</td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td align="left"><a href="hp1.php">网站使用规则</a><br>
+<a href="hp_user.php">网站用户协议</a>
+</td></tr></tbody></table>
+</center>
+</center></center></body></html>

@@ -1,0 +1,174 @@
+<html><head>
+<meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible">
+<meta content="IE=7" http-equiv="X-UA-Compatible">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>信息学奥赛一本通（C++版）在线评测系统</title>
+<link rel="iocn" type="image/x-icon" href="./favicon.ico">
+<link rel="stylesheet" href="bnuoj.css">
+<link type="text/css" rel="stylesheet" href="sh_style.css">
+<script type="text/javascript" src="js/sh_main3.js"></script>
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head><body topmargin="0" onload="sh_highlightDocument();"><div id="MathJax_Message" style="display: none;"></div>
+<center><table class="webtop" width="98%">
+<tbody><tr><th width="60%"><img src="5.jpg" border="0" name="banner"><br><font size="2" color="#FFA07A">成都石室中学、福建长乐一中信奥教练联合呈现。题库教师群:1040954710或515658966,仅供教师加入</font></th>
+<th width="15%" align="left">
+初赛题库：<a href="https://tg.ssoier.cn" target="_blank" class="a7">提高组</a>&nbsp;<a href="https://pj.ssoier.cn" target="_blank" class="a7">普及组</a><br><br>
+拥有自我：<a href="https://tk.ssoier.cn" target="_blank" class="a7">一本通自由题库</a><br><br>
+更多拥有：<a href="https://ex.ssoier.cn" target="_blank" class="a7">扩展题库</a>
+&nbsp;<a href="https://bas.ssoier.cn" target="_blank" class="a7">编程启蒙</a><br>
+</th>
+<th width="15%">
+你现在还未登录哦！<br><a href="login0.php">用户登录</a>&nbsp;&nbsp;<a href="find_pd.php">找回密码</a><br><a href="register_a.php">注册新用户</a></th></tr></tbody></table>
+<table class="menu" width="98%"><tbody><tr bgcolor="#c8d4f7">
+<th width="12%" class="menu"><a href="index.php" class="menu">首页 </a></th>
+<th width="12%" class="menu"><a href="ranklist.php" class="menu">排名 </a></th>
+<th width="14%" class="menu"><a href="status.php" class="menu">提交记录 </a></th>
+<th width="14%" class="menu"><a href="problem_list.php?page=" class="menu">题目列表 </a></th>
+<th width="14%" class="menu"><a href="contest_list.php" class="menu">测试比赛 </a></th>
+<th width="14%" class="menu"><a href="tch_index.php" class="menu">教师频道</a> </th>
+<th width="14%" class="menu"><a href="book.php" class="menu">正版书籍</a> </th>
+<th width="12%" class="menu"><a href="about.php" class="menu">关于 </a></th>
+</tr></tbody></table>
+<hr>
+<script type="text/javascript" src="utf8-php/ueditor.config.js"></script>
+<script type="text/javascript" src="utf8-php/ueditor.all.min.js"></script>
+<script type="text/javascript" src="utf8-php/lang/zh-cn/zh-cn.js"></script>
+<script type="text/javascript" src="mk/showdown.min.js"></script>
+<script type="text/x-mathjax-config;executed=true">
+  MathJax.Hub.Config({showProcessingMessages: false,tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],processEscapes:true},menuSettings: {zoom: "Hover"}});
+</script>
+<script type="text/javascript" src="mk/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<style type="text/css">
+pre {
+  margin:10px auto;
+  padding:10px;
+  background-color:#f1f1f1;
+  white-space:pre-wrap;
+  word-wrap:break-word;
+  letter-spacing:0;
+  font:14px/20px 'courier new';
+  position:relative;
+  border-radius:5px;
+  box-shadow:0px 0px 1px #000;
+}
+code {
+  padding:3px; 
+  font-weight:bold;
+  font-size:16px;
+  background-color:#e7e7e7;
+  border-radius:3px;
+}
+</style>
+<center><table in-width="600px"><tbody><tr><td class="pcontent"><center><h3>4055：【GESP2403八级】公倍数问题</h3><br><font size="2">时间限制: 1000 ms &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 内存限制: 131072 KB<br>提交数:<span id="zz02">19</span>&nbsp;&nbsp;&nbsp; 通过数: <span id="zz03">13</span></font><br></center><h3>【题目描述】</h3>
+<script>pshow("小 A 写了一个$N×M$ 的矩阵A ，我们看不到这个矩阵，但我们可以知道，其中第$i$ 行第$j$ 列的元素$A_{i,j}$ 是$i$ 和$j$ 的公倍数（$i=1,2,...,N$ ，$j=1,2,...,M$ ）。现在有$K$ 个小朋友，其中第$k$ 个小朋友想知道，矩阵A 中最多有多少个元素可以是$k$ （$k=1,2,...,K$ ）。请你帮助这些小朋友求解。\n注意：每位小朋友的答案互不相关，例如，有些位置既可能是$x$ ，又可能是$y$ ，则它同可以时满足$x,y$ 两名小朋友的要求。\n方便起见，你只需要输出$\\sum_{k=1}^{K}k×ans_k$ 即可，其中$ans_k$ 表示第$k$ 名小朋友感兴趣的答案。");</script><div class="xxbox"><p>小 A 写了一个<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-1"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-2">N</span><span class="MJXp-mo" id="MJXp-Span-3" style="margin-left: 0.267em; margin-right: 0.267em;">×</span><span class="MJXp-mi MJXp-italic" id="MJXp-Span-4">M</span></span></span><script type="math/tex" id="MathJax-Element-1">N×M</script> 的矩阵A ，我们看不到这个矩阵，但我们可以知道，其中第<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-5"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-6">i</span></span></span><script type="math/tex" id="MathJax-Element-2">i</script> 行第<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-7"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-8">j</span></span></span><script type="math/tex" id="MathJax-Element-3">j</script> 列的元素<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-9"><span class="MJXp-msubsup" id="MJXp-Span-10"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-11" style="margin-right: 0.05em;">A</span><span class="MJXp-mrow MJXp-script" id="MJXp-Span-12" style="vertical-align: -0.4em;"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-13">i</span><span class="MJXp-mo" id="MJXp-Span-14">,</span><span class="MJXp-mi MJXp-italic" id="MJXp-Span-15">j</span></span></span></span></span><script type="math/tex" id="MathJax-Element-4">A_{i,j}</script> 是<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-16"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-17">i</span></span></span><script type="math/tex" id="MathJax-Element-5">i</script> 和<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-18"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-19">j</span></span></span><script type="math/tex" id="MathJax-Element-6">j</script> 的公倍数（<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-20"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-21">i</span><span class="MJXp-mo" id="MJXp-Span-22" style="margin-left: 0.333em; margin-right: 0.333em;">=</span><span class="MJXp-mn" id="MJXp-Span-23">1</span><span class="MJXp-mo" id="MJXp-Span-24" style="margin-left: 0em; margin-right: 0.222em;">,</span><span class="MJXp-mn" id="MJXp-Span-25">2</span><span class="MJXp-mo" id="MJXp-Span-26" style="margin-left: 0em; margin-right: 0.222em;">,</span><span class="MJXp-mo" id="MJXp-Span-27" style="margin-left: 0em; margin-right: 0.222em;">.</span><span class="MJXp-mo" id="MJXp-Span-28" style="margin-left: 0em; margin-right: 0.222em;">.</span><span class="MJXp-mo" id="MJXp-Span-29" style="margin-left: 0em; margin-right: 0.222em;">.</span><span class="MJXp-mo" id="MJXp-Span-30" style="margin-left: 0em; margin-right: 0.222em;">,</span><span class="MJXp-mi MJXp-italic" id="MJXp-Span-31">N</span></span></span><script type="math/tex" id="MathJax-Element-7">i=1,2,...,N</script> ，<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-32"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-33">j</span><span class="MJXp-mo" id="MJXp-Span-34" style="margin-left: 0.333em; margin-right: 0.333em;">=</span><span class="MJXp-mn" id="MJXp-Span-35">1</span><span class="MJXp-mo" id="MJXp-Span-36" style="margin-left: 0em; margin-right: 0.222em;">,</span><span class="MJXp-mn" id="MJXp-Span-37">2</span><span class="MJXp-mo" id="MJXp-Span-38" style="margin-left: 0em; margin-right: 0.222em;">,</span><span class="MJXp-mo" id="MJXp-Span-39" style="margin-left: 0em; margin-right: 0.222em;">.</span><span class="MJXp-mo" id="MJXp-Span-40" style="margin-left: 0em; margin-right: 0.222em;">.</span><span class="MJXp-mo" id="MJXp-Span-41" style="margin-left: 0em; margin-right: 0.222em;">.</span><span class="MJXp-mo" id="MJXp-Span-42" style="margin-left: 0em; margin-right: 0.222em;">,</span><span class="MJXp-mi MJXp-italic" id="MJXp-Span-43">M</span></span></span><script type="math/tex" id="MathJax-Element-8">j=1,2,...,M</script> ）。现在有<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-44"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-45">K</span></span></span><script type="math/tex" id="MathJax-Element-9">K</script> 个小朋友，其中第<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-46"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-47">k</span></span></span><script type="math/tex" id="MathJax-Element-10">k</script> 个小朋友想知道，矩阵A 中最多有多少个元素可以是<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-48"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-49">k</span></span></span><script type="math/tex" id="MathJax-Element-11">k</script> （<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-50"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-51">k</span><span class="MJXp-mo" id="MJXp-Span-52" style="margin-left: 0.333em; margin-right: 0.333em;">=</span><span class="MJXp-mn" id="MJXp-Span-53">1</span><span class="MJXp-mo" id="MJXp-Span-54" style="margin-left: 0em; margin-right: 0.222em;">,</span><span class="MJXp-mn" id="MJXp-Span-55">2</span><span class="MJXp-mo" id="MJXp-Span-56" style="margin-left: 0em; margin-right: 0.222em;">,</span><span class="MJXp-mo" id="MJXp-Span-57" style="margin-left: 0em; margin-right: 0.222em;">.</span><span class="MJXp-mo" id="MJXp-Span-58" style="margin-left: 0em; margin-right: 0.222em;">.</span><span class="MJXp-mo" id="MJXp-Span-59" style="margin-left: 0em; margin-right: 0.222em;">.</span><span class="MJXp-mo" id="MJXp-Span-60" style="margin-left: 0em; margin-right: 0.222em;">,</span><span class="MJXp-mi MJXp-italic" id="MJXp-Span-61">K</span></span></span><script type="math/tex" id="MathJax-Element-12">k=1,2,...,K</script> ）。请你帮助这些小朋友求解。</p><p>注意：每位小朋友的答案互不相关，例如，有些位置既可能是<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-62"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-63">x</span></span></span><script type="math/tex" id="MathJax-Element-13">x</script> ，又可能是<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-64"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-65">y</span></span></span><script type="math/tex" id="MathJax-Element-14">y</script> ，则它同可以时满足<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-66"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-67">x</span><span class="MJXp-mo" id="MJXp-Span-68" style="margin-left: 0em; margin-right: 0.222em;">,</span><span class="MJXp-mi MJXp-italic" id="MJXp-Span-69">y</span></span></span><script type="math/tex" id="MathJax-Element-15">x,y</script> 两名小朋友的要求。</p><p>方便起见，你只需要输出<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-70"><span class="MJXp-msubsup" id="MJXp-Span-71"><span class="MJXp-mo" id="MJXp-Span-72" style="margin-left: 0.111em; margin-right: 0.05em;">∑</span><span class="MJXp-script-box" style="height: 1.86em; vertical-align: -0.64em;"><span class=" MJXp-script"><span><span style="margin-bottom: -0.25em;"><span class="MJXp-mrow" id="MJXp-Span-77"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-78">K</span></span></span></span></span><span class=" MJXp-script"><span><span style="margin-top: -0.85em;"><span class="MJXp-mrow" id="MJXp-Span-73"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-74">k</span><span class="MJXp-mo" id="MJXp-Span-75">=</span><span class="MJXp-mn" id="MJXp-Span-76">1</span></span></span></span></span></span></span><span class="MJXp-mi MJXp-italic" id="MJXp-Span-79">k</span><span class="MJXp-mo" id="MJXp-Span-80" style="margin-left: 0.267em; margin-right: 0.267em;">×</span><span class="MJXp-mi MJXp-italic" id="MJXp-Span-81">a</span><span class="MJXp-mi MJXp-italic" id="MJXp-Span-82">n</span><span class="MJXp-msubsup" id="MJXp-Span-83"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-84" style="margin-right: 0.05em;">s</span><span class="MJXp-mi MJXp-italic MJXp-script" id="MJXp-Span-85" style="vertical-align: -0.4em;">k</span></span></span></span><script type="math/tex" id="MathJax-Element-16">\sum_{k=1}^{K}k×ans_k</script> 即可，其中<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-86"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-87">a</span><span class="MJXp-mi MJXp-italic" id="MJXp-Span-88">n</span><span class="MJXp-msubsup" id="MJXp-Span-89"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-90" style="margin-right: 0.05em;">s</span><span class="MJXp-mi MJXp-italic MJXp-script" id="MJXp-Span-91" style="vertical-align: -0.4em;">k</span></span></span></span><script type="math/tex" id="MathJax-Element-17">ans_k</script> 表示第<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-92"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-93">k</span></span></span><script type="math/tex" id="MathJax-Element-18">k</script> 名小朋友感兴趣的答案。</p></div>
+<h3>【输入】</h3>
+<script>pshow("第一行三个正整数$N,M,K$ 。");</script><div class="xxbox"><p>第一行三个正整数<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-94"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-95">N</span><span class="MJXp-mo" id="MJXp-Span-96" style="margin-left: 0em; margin-right: 0.222em;">,</span><span class="MJXp-mi MJXp-italic" id="MJXp-Span-97">M</span><span class="MJXp-mo" id="MJXp-Span-98" style="margin-left: 0em; margin-right: 0.222em;">,</span><span class="MJXp-mi MJXp-italic" id="MJXp-Span-99">K</span></span></span><script type="math/tex" id="MathJax-Element-19">N,M,K</script> 。</p></div>
+<h3>【输出】</h3>
+<script>pshow("输出一行，即 $\\sum_{k=1}^{K}k×ans_k$。\n请注意，这个数可能很大，使用 C++ 语言的选手请酌情使用 long long 等数据类型存储答案。");</script><div class="xxbox"><p>输出一行，即 <span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-100"><span class="MJXp-msubsup" id="MJXp-Span-101"><span class="MJXp-mo" id="MJXp-Span-102" style="margin-left: 0.111em; margin-right: 0.05em;">∑</span><span class="MJXp-script-box" style="height: 1.86em; vertical-align: -0.64em;"><span class=" MJXp-script"><span><span style="margin-bottom: -0.25em;"><span class="MJXp-mrow" id="MJXp-Span-107"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-108">K</span></span></span></span></span><span class=" MJXp-script"><span><span style="margin-top: -0.85em;"><span class="MJXp-mrow" id="MJXp-Span-103"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-104">k</span><span class="MJXp-mo" id="MJXp-Span-105">=</span><span class="MJXp-mn" id="MJXp-Span-106">1</span></span></span></span></span></span></span><span class="MJXp-mi MJXp-italic" id="MJXp-Span-109">k</span><span class="MJXp-mo" id="MJXp-Span-110" style="margin-left: 0.267em; margin-right: 0.267em;">×</span><span class="MJXp-mi MJXp-italic" id="MJXp-Span-111">a</span><span class="MJXp-mi MJXp-italic" id="MJXp-Span-112">n</span><span class="MJXp-msubsup" id="MJXp-Span-113"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-114" style="margin-right: 0.05em;">s</span><span class="MJXp-mi MJXp-italic MJXp-script" id="MJXp-Span-115" style="vertical-align: -0.4em;">k</span></span></span></span><script type="math/tex" id="MathJax-Element-20">\sum_{k=1}^{K}k×ans_k</script>。</p><p>请注意，这个数可能很大，使用 C++ 语言的选手请酌情使用 long long 等数据类型存储答案。</p></div>
+<h3>【输入样例】</h3>
+<font size="3"><pre>2 5 2</pre></font>
+<h3>【输出样例】</h3>
+<font size="3"><pre>9</pre></font>
+<h3>【提示】</h3>
+<script>pshow("样例解释 1\n只有$A_{1,1}$ 可以是$1$ ，其余都不行。\n$A_{1,1},A_{1,2},A_{2,1},A_{2,2}$都可以是$2$ ，而其余不行。\n因此答案是 $1×1+2×4=9$。\n样例输入 2\n<pre>100 100 100</pre>\n样例输出 2\n<pre>185233</pre>\n数据规模\n对于30% 的测试点，保证$N,M,K\\le 10$ ；\n对于30% 的测试点，保证$N,M,K\\le 500$ ；\n对于100% 的测试点，保证$N,M\\le 10^5$ ，$K\\le 10^6$ 。");</script><div class="xxbox"><p>样例解释 1</p><p>只有<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-116"><span class="MJXp-msubsup" id="MJXp-Span-117"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-118" style="margin-right: 0.05em;">A</span><span class="MJXp-mrow MJXp-script" id="MJXp-Span-119" style="vertical-align: -0.4em;"><span class="MJXp-mn" id="MJXp-Span-120">1</span><span class="MJXp-mo" id="MJXp-Span-121">,</span><span class="MJXp-mn" id="MJXp-Span-122">1</span></span></span></span></span><script type="math/tex" id="MathJax-Element-21">A_{1,1}</script> 可以是<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-123"><span class="MJXp-mn" id="MJXp-Span-124">1</span></span></span><script type="math/tex" id="MathJax-Element-22">1</script> ，其余都不行。</p><p><span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-125"><span class="MJXp-msubsup" id="MJXp-Span-126"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-127" style="margin-right: 0.05em;">A</span><span class="MJXp-mrow MJXp-script" id="MJXp-Span-128" style="vertical-align: -0.4em;"><span class="MJXp-mn" id="MJXp-Span-129">1</span><span class="MJXp-mo" id="MJXp-Span-130">,</span><span class="MJXp-mn" id="MJXp-Span-131">1</span></span></span><span class="MJXp-mo" id="MJXp-Span-132" style="margin-left: 0em; margin-right: 0.222em;">,</span><span class="MJXp-msubsup" id="MJXp-Span-133"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-134" style="margin-right: 0.05em;">A</span><span class="MJXp-mrow MJXp-script" id="MJXp-Span-135" style="vertical-align: -0.4em;"><span class="MJXp-mn" id="MJXp-Span-136">1</span><span class="MJXp-mo" id="MJXp-Span-137">,</span><span class="MJXp-mn" id="MJXp-Span-138">2</span></span></span><span class="MJXp-mo" id="MJXp-Span-139" style="margin-left: 0em; margin-right: 0.222em;">,</span><span class="MJXp-msubsup" id="MJXp-Span-140"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-141" style="margin-right: 0.05em;">A</span><span class="MJXp-mrow MJXp-script" id="MJXp-Span-142" style="vertical-align: -0.4em;"><span class="MJXp-mn" id="MJXp-Span-143">2</span><span class="MJXp-mo" id="MJXp-Span-144">,</span><span class="MJXp-mn" id="MJXp-Span-145">1</span></span></span><span class="MJXp-mo" id="MJXp-Span-146" style="margin-left: 0em; margin-right: 0.222em;">,</span><span class="MJXp-msubsup" id="MJXp-Span-147"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-148" style="margin-right: 0.05em;">A</span><span class="MJXp-mrow MJXp-script" id="MJXp-Span-149" style="vertical-align: -0.4em;"><span class="MJXp-mn" id="MJXp-Span-150">2</span><span class="MJXp-mo" id="MJXp-Span-151">,</span><span class="MJXp-mn" id="MJXp-Span-152">2</span></span></span></span></span><script type="math/tex" id="MathJax-Element-23">A_{1,1},A_{1,2},A_{2,1},A_{2,2}</script>都可以是<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-153"><span class="MJXp-mn" id="MJXp-Span-154">2</span></span></span><script type="math/tex" id="MathJax-Element-24">2</script> ，而其余不行。</p><p>因此答案是 <span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-155"><span class="MJXp-mn" id="MJXp-Span-156">1</span><span class="MJXp-mo" id="MJXp-Span-157" style="margin-left: 0.267em; margin-right: 0.267em;">×</span><span class="MJXp-mn" id="MJXp-Span-158">1</span><span class="MJXp-mo" id="MJXp-Span-159" style="margin-left: 0.267em; margin-right: 0.267em;">+</span><span class="MJXp-mn" id="MJXp-Span-160">2</span><span class="MJXp-mo" id="MJXp-Span-161" style="margin-left: 0.267em; margin-right: 0.267em;">×</span><span class="MJXp-mn" id="MJXp-Span-162">4</span><span class="MJXp-mo" id="MJXp-Span-163" style="margin-left: 0.333em; margin-right: 0.333em;">=</span><span class="MJXp-mn" id="MJXp-Span-164">9</span></span></span><script type="math/tex" id="MathJax-Element-25">1×1+2×4=9</script>。</p><p>样例输入 2</p><pre>100 100 100</pre><p></p><p>样例输出 2</p><pre>185233</pre><p></p><p>数据规模</p><p>对于30% 的测试点，保证<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-165"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-166">N</span><span class="MJXp-mo" id="MJXp-Span-167" style="margin-left: 0em; margin-right: 0.222em;">,</span><span class="MJXp-mi MJXp-italic" id="MJXp-Span-168">M</span><span class="MJXp-mo" id="MJXp-Span-169" style="margin-left: 0em; margin-right: 0.222em;">,</span><span class="MJXp-mi MJXp-italic" id="MJXp-Span-170">K</span><span class="MJXp-mo" id="MJXp-Span-171" style="margin-left: 0.333em; margin-right: 0.333em;">≤</span><span class="MJXp-mn" id="MJXp-Span-172">10</span></span></span><script type="math/tex" id="MathJax-Element-26">N,M,K\le 10</script> ；</p><p>对于30% 的测试点，保证<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-173"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-174">N</span><span class="MJXp-mo" id="MJXp-Span-175" style="margin-left: 0em; margin-right: 0.222em;">,</span><span class="MJXp-mi MJXp-italic" id="MJXp-Span-176">M</span><span class="MJXp-mo" id="MJXp-Span-177" style="margin-left: 0em; margin-right: 0.222em;">,</span><span class="MJXp-mi MJXp-italic" id="MJXp-Span-178">K</span><span class="MJXp-mo" id="MJXp-Span-179" style="margin-left: 0.333em; margin-right: 0.333em;">≤</span><span class="MJXp-mn" id="MJXp-Span-180">500</span></span></span><script type="math/tex" id="MathJax-Element-27">N,M,K\le 500</script> ；</p><p>对于100% 的测试点，保证<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-181"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-182">N</span><span class="MJXp-mo" id="MJXp-Span-183" style="margin-left: 0em; margin-right: 0.222em;">,</span><span class="MJXp-mi MJXp-italic" id="MJXp-Span-184">M</span><span class="MJXp-mo" id="MJXp-Span-185" style="margin-left: 0.333em; margin-right: 0.333em;">≤</span><span class="MJXp-msubsup" id="MJXp-Span-186"><span class="MJXp-mn" id="MJXp-Span-187" style="margin-right: 0.05em;">10</span><span class="MJXp-mn MJXp-script" id="MJXp-Span-188" style="vertical-align: 0.5em;">5</span></span></span></span><script type="math/tex" id="MathJax-Element-28">N,M\le 10^5</script> ，<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math" id="MJXp-Span-189"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-190">K</span><span class="MJXp-mo" id="MJXp-Span-191" style="margin-left: 0.333em; margin-right: 0.333em;">≤</span><span class="MJXp-msubsup" id="MJXp-Span-192"><span class="MJXp-mn" id="MJXp-Span-193" style="margin-right: 0.05em;">10</span><span class="MJXp-mn MJXp-script" id="MJXp-Span-194" style="vertical-align: 0.5em;">6</span></span></span></span><script type="math/tex" id="MathJax-Element-29">K\le 10^6</script> 。</p></div>
+<p align="center"> <a href="javascript:void(0);" onclick="submit()"><font color="blue">提交</font></a><a href="problem_stat.php?pid=4055" class="bottom_link"> 统计信息 </a> </p><script>function submit(){alert("你还没有登录！");}</script></td></tr></tbody></table><hr>
+<center><table width="100%" bgcolor="#F5F5F5"><tbody><tr><td align="right" width="50%"><font size="2">本题库与《信息学奥赛一本通（C++版）》（南京大学出版社）配套。<br>本网站属公益、非盈利性质，不涉及与书相关的商业活动。<br>蜀ICP备2024068936号-2&nbsp;&nbsp;联系我们:&nbsp;248801752@qq.com&nbsp;&nbsp;23967609@qq.com</font>
+</td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td align="left"><a href="hp1.php">网站使用规则</a><br>
+<a href="hp_user.php">网站用户协议</a>
+</td></tr></tbody></table>
+</center>
+</center></center></body></html>
