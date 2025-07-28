@@ -1,12 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from bs4 import BeautifulSoup
-from selenium.webdriver.common.alert import Alert
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.wait import WebDriverWait
-import requests
 from urllib.parse import urljoin
 import os
 import sys
@@ -27,6 +21,10 @@ option.add_experimental_option("useAutomationExtension", False)
 
 driver = webdriver.Chrome(options=option)
 driver.get(url)
+driver.execute_script("""
+    document.querySelector("a[href='javascript:void(0);'][onclick=\\"setCookie('xmenu','4,noippj')\\"]").click();
+""")
+
 
 try:
     driver.execute_script('document.querySelector(\'a[href="login0.php"]\').click();')
